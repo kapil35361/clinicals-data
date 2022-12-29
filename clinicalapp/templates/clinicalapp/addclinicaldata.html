@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Patient Detail</title>
+   
+
+</head>
+<body>
+    <h1>Patient Data</h1>	
+    <h2>First Name:  {{patient.firstName}}</h2>
+    <h2>Last Name:  {{patient.lastName}}</h2> 
+    <h2>Age:  {{patient.Age}}</h2> 
+    <h2>Gender:  {{patient.Gender}}</h2> 
+
+    <br/>
+        
+   
+		<br/>
+    
+    <h1>patient Clinical Data</h1>
+    <form method='post'>
+            <table>
+              {{form.as_table}}
+              
+            </table>
+            {% csrf_token %}
+            <input type='submit' value='Save'>
+        </form>    
+       																
+</body>
+</html>

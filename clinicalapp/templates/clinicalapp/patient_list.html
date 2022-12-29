@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>clinical data</title>
+    
+
+
+</head>
+<body>
+    
+        <table border='2'>
+            <thead>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Age</th>
+                <th>Gender</th>
+                
+            </thead>
+            {% for patient in patient_list %}
+            <tr>
+                <td>{{patient.id}}</td>
+                <td>{{patient.firstName}}</td>
+                <td>{{patient.lastName}}</td>
+                <td>{{patient.Age}}</td>
+                <td>{{patient.Gender}}</td>
+                <td><a href='/update/{{patient.id}}'>Update Patient Record</a></td>
+                <td><a href='/delete/{{patient.id}}'>Delete</a></td>
+                <td><a href='/addclinicaldata/{{patient.id}}'>Add Clinical Data</a></td>
+                <td><a href='/analyze/{{patient.id}}'>Analyze Patient Data</a></td>
+                
+            </tr>
+            {% endfor %}
+        </table>
+    
+     
+    
+    
+    <a href='/create'>Add patient</a>
+    <a href='/accounts/logout/'>Logout</a>
+																		
+</body>
+</html>

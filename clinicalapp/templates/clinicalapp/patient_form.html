@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>clinical data</title>
+   
+
+</head>
+<body>
+    <h2>Patient Data</h2>	
+    <form method='post'>
+        <table>
+          {{form.as_table}}
+          {% csrf_token %}
+        </table>  
+        <br/>
+        <input type='submit' value='Save'>
+    </form> 
+																		
+</body>
+</html>
